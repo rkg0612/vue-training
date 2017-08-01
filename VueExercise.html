@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Articles</title>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="articles">
+	<div v-for = "articList in articleList">
+		<div :id="articList.id" v-if="articList.seen"> {{ articList.articleTitle }} <p><strong>Description: </strong>{{ articList.articledesc }}</p> 
+			<button @click="readStat(articList.id)">Mark as read/unread</button> 
+			<p><strong>Status: </strong> <span>{{ articList.artReadText }}</span></p>
+		 	<hr> 
+		</div>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript" src="exercise.js"></script>
+</html>
